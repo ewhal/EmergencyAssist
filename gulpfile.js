@@ -1,7 +1,7 @@
 var gulp = require('gulp');
-var babel = require('gulp-babel');
+var fs = require('fs');
+var browserify = require('browserify');
 var sass = require('gulp-sass');
-var plumber = require('gulp-plumber');
 var watch = require('gulp-watch');
 
 gulp.task(
@@ -16,10 +16,10 @@ gulp.task(
 gulp.task(
   'compile-es6',
   function() {
-    gulp.src('src/**/*.js')
-      .pipe(plumber())
-      .pipe(babel())
-      .pipe(gulp.dest('www'));
+    browserify('src/js/app.js')
+      .transform('babelify', {presets: ['es2015', 'react']})
+      .bundle()
+      .pipe(fs.createWriteStream('www/js/app.js'));
   }
 );
 
