@@ -3,6 +3,7 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var sass = require('gulp-sass');
 var image = require('gulp-image');
+var sym = require('gulp-sym');
 var watch = require('gulp-watch');
 
 gulp.task(
@@ -11,7 +12,8 @@ gulp.task(
     'compile-es6',
     'compile-html',
     'compile-scss',
-    'compile-image'
+    'compile-image',
+    'compile-symlink'
   ]
 );
 
@@ -37,9 +39,9 @@ gulp.task(
 gulp.task(
   'compile-scss',
   function() {
-    gulp.src('src/**/*.scss')
+    gulp.src('src/css/app.scss')
       .pipe(sass({ includePaths: ['node_modules'] }).on('error', sass.logError))
-      .pipe(gulp.dest('www'));
+      .pipe(gulp.dest('www/css/'));
   }
 );
 
@@ -49,6 +51,14 @@ gulp.task(
     gulp.src('src/img/*')
       .pipe(image())
       .pipe(gulp.dest('www/img/'));
+  }
+);
+
+gulp.task(
+  'compile-symlink',
+  function() {
+    gulp.src('node_modules/font-awesome/fonts')
+      .pipe(sym('www/fonts', { force: true }));
   }
 );
 
