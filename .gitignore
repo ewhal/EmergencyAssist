@@ -40,3 +40,6 @@ node_modules
 # cordova
 /platforms
 /plugins
+
+# gulp output
+/www

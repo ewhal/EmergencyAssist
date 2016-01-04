@@ -1,7 +1,8 @@
 var gulp = require('gulp');
-var fs = require('fs');
 var browserify = require('browserify');
+var source = require('vinyl-source-stream');
 var sass = require('gulp-sass');
+var image = require('gulp-image');
 var watch = require('gulp-watch');
 
 gulp.task(
@@ -9,7 +10,8 @@ gulp.task(
   [
     'compile-es6',
     'compile-html',
-    'compile-scss'
+    'compile-scss',
+    'compile-image'
   ]
 );
 
@@ -19,7 +21,8 @@ gulp.task(
     browserify('src/js/app.js')
       .transform('babelify', {presets: ['es2015', 'react']})
       .bundle()
-      .pipe(fs.createWriteStream('www/js/app.js'));
+      .pipe(source('app.js'))
+      .pipe(gulp.dest('www/js/'));
   }
 );
 
@@ -37,6 +40,15 @@ gulp.task(
     gulp.src('src/**/*.scss')
       .pipe(sass({ includePaths: ['node_modules'] }).on('error', sass.logError))
       .pipe(gulp.dest('www'));
+  }
+);
+
+gulp.task(
+  'compile-image',
+  function() {
+    gulp.src('src/img/*')
+      .pipe(image())
+      .pipe(gulp.dest('www/img/'));
   }
 );
 
