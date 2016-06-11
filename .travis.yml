@@ -12,9 +12,8 @@ install:
 - echo "Install stage"
 - sudo apt-get install -y python-software-properties
 - source ~/.nvm/nvm.sh 
-- sudo nvm install stable
-- sudo nvm use stable
-
+- nvm install stable
+- nvm use stable
 - sudo npm install
 before_script:
 # Commands to excecute before running tests
