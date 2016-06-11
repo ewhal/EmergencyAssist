@@ -17,7 +17,7 @@ install:
 - sudo npm install
 - sudo npm install node-sass@2.0.1
 - sudo npm rebuild node-sass
-- rm -rf node_modules
+- sudo rm -rf node_modules
 - sudo npm install
 before_script:
 # Commands to excecute before running tests
