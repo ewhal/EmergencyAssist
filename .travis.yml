@@ -3,8 +3,7 @@ android:
   components:
     - build-tools-22.0.1 # Specify your build tools verison
     - android-22 # Android Platform Target
-env: # Envirement Variables
-global:
+
 before_install:
 # Commands to excecute before install
 - echo "Before install stage"
@@ -12,10 +11,7 @@ install:
 # Specify what and how to install
 - echo "Install stage"
 - sudo apt-get install -y python-software-properties
-- curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -  
-- sudo apt-get install -y nodejs
 - sudo npm install
-- sudo npm rebuild node-sass
 before_script:
 # Commands to excecute before running tests
 - echo "Before script stage"
