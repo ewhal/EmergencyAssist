@@ -12,6 +12,7 @@ install:
 - echo "Install stage"
 - sudo apt-get install -y python-software-properties
 - source ~/.nvm/nvm.sh 
+- nvm ls-remote
 - nvm install stable
 - nvm use stable
 - npm install
