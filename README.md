@@ -1,4 +1,4 @@
-# Emergency Assist [![Build Status](https://travis-ci.org/ewhal/EmergencyAssist.svg?branch=master)](https://travis-ci.org/ewhal/EmergencyAssist) 
+# Emergency Assist [![Build Status](https://travis-ci.org/ewhal/EmergencyAssist.svg?branch=master)](https://travis-ci.org/ewhal/EmergencyAssist) [![devDependency Status](https://david-dm.org/ewhal/EmergencyAssist/dev-status.svg)](https://david-dm.org/ewhal/EmergencyAssist#info=devDependencies) 
 
 Cordova + Bootstrap + Font-Awesome
 
