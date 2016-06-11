@@ -15,7 +15,6 @@ install:
 - curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -  
 - sudo apt-get install -y nodejs
 - sudo npm install
-- sudo n 0.12.7
 - sudo npm install node-sass@2
 - sudo npm -g install node-gyp@3
 - sudo npm rebuild node-sass
