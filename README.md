@@ -1,6 +1,6 @@
-# hello-cordova
+# Emergency Assist [![Build Status](https://travis-ci.org/ewhal/EmergencyAssist.svg?branch=master)](https://travis-ci.org/ewhal/EmergencyAssist) 
 
-Cordova + Bootstrap + Font-Awesome + Vue.js
+Cordova + Bootstrap + Font-Awesome
 
 ## build html/css/js
 
