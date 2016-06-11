@@ -15,6 +15,7 @@ install:
 -  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -  
 - sudo apt-get install -y nodejs
 - sudo npm install
+- sudo npm rebuild node-sass
 before_script:
 # Commands to excecute before running tests
 - echo "Before script stage"
