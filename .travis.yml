@@ -13,7 +13,7 @@ install:
 - echo "Install stage"
 - sudo apt-get install -y python-software-properties
 - curl --silent --location https://deb.nodesource.com/setup_0.12 | sudo bash -
-- sudo apt-get install -y nodejs
+- sudo apt-get install -y nodejs libsass
 - sudo npm install
 before_script:
 # Commands to excecute before running tests
