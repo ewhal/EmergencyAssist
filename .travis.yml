@@ -14,7 +14,7 @@ install:
 - source ~/.nvm/nvm.sh 
 - nvm install stable
 - nvm use stable
-- sudo npm install
+- npm install
 before_script:
 # Commands to excecute before running tests
 - echo "Before script stage"
