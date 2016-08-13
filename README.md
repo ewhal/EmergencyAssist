@@ -2,6 +2,9 @@
 
 Cordova + Bootstrap + Font-Awesome
 
+![ui](https://my.mixtape.moe/dtyacx.jpg)
+![signup](https://my.mixtape.moe/pckcmr.jpg)
+
 ## build html/css/js
 
 ```
@@ -24,3 +27,6 @@ $ cordova platform add android
 $ cordova build android
 $ cordova emulate android
 ```
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
